@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "npx jest",
-    "clean": "rm -rd dist",
+    "clean": "npx rimraf dist",
     "rollup": "rollup -c ./rollup.config.js",
     "build": "npm run test && npm run clean && npm run compile && npm run rollup",
     "compile": "tsc --outDir dist --project tsconfig.build.json",
